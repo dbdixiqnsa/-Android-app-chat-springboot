@@ -48,8 +48,7 @@
 📌 花生壳配置教程
 
 3. 服务端配置
-修改 Serve/src/main/resources/application.properties：
-spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
+修改 Serve/src/main/resources/application.properties：<br>spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
 4. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：
 public class Constants {
