@@ -28,38 +28,32 @@
 
 ### 🚦 部署流程
 
-#### 1. 数据库配置
-1. 安装MySQL并配置环境变量  
-   📖 [环境变量配置教程](https://blog.csdn.net/qq_52853542/article/details/124669072)
-2. 执行数据库脚本初始化表结构
--- 在IDEA Database工具中执行仓库中的SQL脚本
-   
-2. 内网穿透配置
-花生壳客户端安装与注册
+&nbsp;&nbsp;&nbsp;&nbsp;使用软件：IntelliJ IDEA(版本无所谓)、Android studio(版本无所谓)、花生壳
 
-创建HTTP映射规则：
+&nbsp;&nbsp;&nbsp;&nbsp;该项目将spring boot部署在本地作为服务器，接收每个app的请求，实现随时随地发送接收信息。
 
-内网主机：本地IP地址
+&nbsp;&nbsp;由于能够不限地点发送消息，需要使用第三方工具实现内网穿透，将本地的内网ip映射到工具提供的公网域名，这里使用的是花生壳内网穿透(免费)
 
-内网端口：8080
+&nbsp;&nbsp;&nbsp;&nbsp;下载地址：https://hsk.oray.com    
+&nbsp;&nbsp;&nbsp;&nbsp;使用教程：https://service.oray.com/question/15507.html
 
-外网域名：花生壳分配的公网域名
+&nbsp;&nbsp;&nbsp;&nbsp;下载MySql
 
-📌 花生壳配置教程
+&nbsp;&nbsp;&nbsp;&nbsp;下载地址：https://dev.mysql.com/downloads/mysql
 
-3. 服务端配置
-修改 Serve/src/main/resources/application.properties：<br>spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>
-spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变<br>
-5. 客户端配置
-修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;// 使用花生壳分配的公网域名<br>
-&nbsp;&nbsp;&nbsp;&nbsp;public static final String BASE_URL = "http://你得到的域名/api";<br>
-&nbsp;&nbsp;&nbsp;&nbsp;public static final String VERSION_BASE_URL = "http://你得到的域名";<br>
-}<br>
-⚠️ 注意事项
-确保服务端端口8080未被占用
+&nbsp;&nbsp;&nbsp;&nbsp;Mysql环境变量配置教程：https://blog.csdn.net/qq_52853542/article/details/124669072
 
-防火墙需放行8080端口流量
+在IDEA的Database中连接数据库，使用仓库中的数据库脚本文件创建相应的数据库
+
+&nbsp;&nbsp;&nbsp;&nbsp;在IDEA中打开spring boot项目Serve，下载相应的依赖，运行后默认监听端口为8080，在花生壳内网穿透编辑页面将这个端口和自己的内网ip地址填入，实现内网穿透，更详细的操作可以看文件：项目详细介绍.doc
+&nbsp;&nbsp;映射完成后，将客户端Client文件的java/com/example/chat/utils/Constants.java文件中的BASE_URL和VERSION_BASE_URL修改为自己得到的域名(注：BASE_URL结尾的/api不要误删)
+
+服务端Serve中src/main/resources/application.properties文件里的
+
+spring.datasource.username为MySQL数据库的用户名
+spring.datasource.password为数据库的密码
+spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
+&nbsp;&nbsp;在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变
 
 📬 技术支持
 遇到问题？欢迎随时联系：
