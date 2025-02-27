@@ -52,7 +52,7 @@
 4. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {
 <br>// 使用花生壳分配的公网域名
-&nbsp;&nbsp;&nbsp;&nbsp;<br>public static final String BASE_URL = "http://your-domain.com/api";
+&nbsp;&nbsp; &nbsp; &nbsp; <br>public static final String BASE_URL = "http://your-domain.com/api";
 &nbsp;&nbsp;&nbsp;&nbsp;<br>public static final String VERSION_BASE_URL = "http://your-domain.com";<br>
 }
 ⚠️ 注意事项
