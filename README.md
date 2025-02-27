@@ -25,9 +25,11 @@
 &nbsp;&nbsp;映射完成后，将客户端Client文件的java/com/example/chat/utils/Constants.java文件中的BASE_URL和VERSION_BASE_URL修改为自己得到的域名(注：BASE_URL结尾的/api不要误删)
 
 &nbsp;&nbsp;&nbsp;&nbsp;服务端Serve中src/main/resources/application.properties文件里的
-&nbsp;&nbsp;spring.datasource.username为MySQL数据库的用户名
-&nbsp;&nbsp;spring.datasource.password为数据库的密码
-&nbsp;&nbsp;spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
+spring.datasource.username为MySQL数据库的用户名
+
+spring.datasource.password为数据库的密码
+
+spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
 &nbsp;&nbsp;在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变
 
 
