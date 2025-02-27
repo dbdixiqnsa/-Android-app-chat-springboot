@@ -24,7 +24,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;在IDEA中打开spring boot项目Serve，下载相应的依赖，运行后默认监听端口为8080，在花生壳内网穿透编辑页面将这个端口和自己的内网ip地址填入，实现内网穿透，更详细的操作可以看文件：项目详细介绍.doc
 &nbsp;&nbsp;映射完成后，将客户端Client文件的java/com/example/chat/utils/Constants.java文件中的BASE_URL和VERSION_BASE_URL修改为自己得到的域名(注：BASE_URL结尾的/api不要误删)
 
-&nbsp;&nbsp;&nbsp;&nbsp;服务端Serve中src/main/resources/application.properties文件里的
+服务端Serve中src/main/resources/application.properties文件里的
 
 spring.datasource.username为MySQL数据库的用户名
 spring.datasource.password为数据库的密码
