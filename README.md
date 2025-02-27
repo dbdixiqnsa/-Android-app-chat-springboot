@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Mysql环境变量配置教程：https://blog.csdn.net/qq_52853542/article/details/124669072
 
-&nbsp;&nbsp;&nbsp;&nbsp;在IDEA的Database中连接数据库，使用仓库中的数据库脚本文件创建相应的数据库
+在IDEA的Database中连接数据库，使用仓库中的数据库脚本文件创建相应的数据库
 
 &nbsp;&nbsp;&nbsp;&nbsp;在IDEA中打开spring boot项目Serve，下载相应的依赖，运行后默认监听端口为8080，在花生壳内网穿透编辑页面将这个端口和自己的内网ip地址填入，实现内网穿透，更详细的操作可以看文件：项目详细介绍.doc
 &nbsp;&nbsp;映射完成后，将客户端Client文件的java/com/example/chat/utils/Constants.java文件中的BASE_URL和VERSION_BASE_URL修改为自己得到的域名(注：BASE_URL结尾的/api不要误删)
