@@ -59,10 +59,6 @@ spring.web.resources.static-locations为用户上传的头像等图片的保存�
 ⚠️ 注意事项
 确保服务端端口8080未被占用
 
-文件存储路径需保持/post_images/目录结构
-
-BASE_URL必须保留结尾的/api路径
-
 防火墙需放行8080端口流量
 
 📬 技术支持
