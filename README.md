@@ -36,4 +36,4 @@ spring.web.resources.static-locations为用户上传的头像等图片的保存�
 ## 如有错误，欢迎反馈。
 ## 部署有问题也可以交流沟通。
 ### 联系方式 
-QQ:1652855974              微信:Lgy2873551074
+QQ:1652855974&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信:Lgy2873551074
