@@ -29,3 +29,10 @@ spring.datasource.username为MySQL数据库的用户名
 spring.datasource.password为数据库的密码
 spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
 在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变
+
+
+
+
+### 如有错误，欢迎反馈。
+### 部署有问题也可以交流沟通。
+### 联系方式 QQ:1652855974 微信:Lgy2873551074
