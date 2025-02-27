@@ -32,8 +32,8 @@
 1. 安装MySQL并配置环境变量  
    📖 [环境变量配置教程](https://blog.csdn.net/qq_52853542/article/details/124669072)
 2. 执行数据库脚本初始化表结构
-```sql
 -- 在IDEA Database工具中执行仓库中的SQL脚本
+   
 2. 内网穿透配置
 花生壳客户端安装与注册
 
@@ -49,17 +49,9 @@
 
 3. 服务端配置
 修改 Serve/src/main/resources/application.properties：
-
-properties
-复制
-spring.datasource.username=您的数据库账号
-spring.datasource.password=您的数据库密码
-spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
+spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
 4. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：
-
-java
-复制
 public class Constants {
     // 使用花生壳分配的公网域名
     public static final String BASE_URL = "http://your-domain.com/api";
