@@ -68,6 +68,5 @@ BASE_URL必须保留结尾的/api路径
 遇到问题？欢迎随时联系：
 
 联系方式	账号
-📧 QQ	1652855974
+📧 QQ	1652855974&nbsp;&nbsp;&nbsp;&nbsp;
 💬 微信	Lgy2873551074
-🐛 GitHub Issue	提交问题
