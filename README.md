@@ -13,7 +13,8 @@
 下载地址：https://hsk.oray.com    
 使用教程：https://service.oray.com/question/15507.html
 
-下载MySql，下载地址：https://dev.mysql.com/downloads/mysql
+下载MySql
+下载地址：https://dev.mysql.com/downloads/mysql
 Mysql环境变量配置教程：https://blog.csdn.net/qq_52853542/article/details/124669072
 
 在IDEA的Database中连接数据库，使用仓库中的数据库脚本文件创建相应的数据库
