@@ -60,6 +60,7 @@ public class Constants {
     public static final String BASE_URL = "http://your-domain.com/api";
     public static final String VERSION_BASE_URL = "http://your-domain.com";
 }
+
 ⚠️ 注意事项
 确保服务端端口8080未被占用
 
@@ -76,3 +77,4 @@ BASE_URL必须保留结尾的/api路径
 📧 QQ	1652855974
 💬 微信	Lgy2873551074
 🐛 GitHub Issue	提交问题
+
