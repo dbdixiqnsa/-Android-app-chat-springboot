@@ -32,7 +32,6 @@
 1. 安装MySQL并配置环境变量  
    📖 [环境变量配置教程](https://blog.csdn.net/qq_52853542/article/details/124669072)
 2. 执行数据库脚本初始化表结构
-```sql
 -- 在IDEA Database工具中执行仓库中的SQL脚本
 2. 内网穿透配置
 花生壳客户端安装与注册
