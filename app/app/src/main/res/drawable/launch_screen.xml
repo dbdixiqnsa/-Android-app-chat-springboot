@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+    <!-- 设置启动页面的背景颜色，与你的主主题一致 -->
+    <item android:drawable="@android:color/white"/>
+
+    <!-- 设置居中的 logo 图像 -->
+    <item>
+        <bitmap
+            android:src="@drawable/launch_screen_ico"
+            android:gravity="center"/>
+    </item>
+
+</layer-list>
