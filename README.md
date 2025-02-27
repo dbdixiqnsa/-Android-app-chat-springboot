@@ -50,16 +50,12 @@
 3. 服务端配置
 修改 Serve/src/main/resources/application.properties：
 
-properties
-复制
 spring.datasource.username=您的数据库账号
 spring.datasource.password=您的数据库密码
 spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
 4. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：
 
-java
-复制
 public class Constants {
     // 使用花生壳分配的公网域名
     public static final String BASE_URL = "http://your-domain.com/api";
