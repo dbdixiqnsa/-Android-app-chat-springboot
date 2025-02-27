@@ -50,7 +50,9 @@
 3. 服务端配置
 修改 Serve/src/main/resources/application.properties：<br>spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
 4. 客户端配置
-修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {<br>// 使用花生壳分配的公网域名<br>public static final String BASE_URL = "http://your-domain.com/api";
+修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {
+<br>// 使用花生壳分配的公网域名
+<br>public static final String BASE_URL = "http://your-domain.com/api";
     <br>public static final String VERSION_BASE_URL = "http://your-domain.com";<br>
 }
 ⚠️ 注意事项
