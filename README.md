@@ -8,7 +8,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;该项目将spring boot部署在本地作为服务器，接收每个app的请求，实现随时随地发送接收信息。
 
-&nbsp;&nbsp;&nbsp;&nbsp;由于能够不限地点发送消息，需要使用第三方工具实现内网穿透，将本地的内网ip映射到工具提供的公网域名，这里使用的是花生壳内网穿透(免费)
+&nbsp;&nbsp;由于能够不限地点发送消息，需要使用第三方工具实现内网穿透，将本地的内网ip映射到工具提供的公网域名，这里使用的是花生壳内网穿透(免费)
 
 &nbsp;&nbsp;&nbsp;&nbsp;下载地址：https://hsk.oray.com    
 &nbsp;&nbsp;&nbsp;&nbsp;使用教程：https://service.oray.com/question/15507.html
