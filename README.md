@@ -4,7 +4,7 @@
 
 ## 部署教程：
 
-&nbsp;&nbsp;&nbsp;&nbsp;使用软件,IntelliJ IDEA(版本无所谓)、Android studio(版本无所谓)、花生壳
+&nbsp;&nbsp;&nbsp;&nbsp;使用软件：IntelliJ IDEA(版本无所谓)、Android studio(版本无所谓)、花生壳
 
 &nbsp;&nbsp;&nbsp;&nbsp;该项目将spring boot部署在本地作为服务器，接收每个app的请求，实现随时随地发送接收信息。
 
