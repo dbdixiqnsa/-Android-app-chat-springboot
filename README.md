@@ -52,8 +52,8 @@
 4. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;// 使用花生壳分配的公网域名<br>
-&nbsp;&nbsp;&nbsp;&nbsp;public static final String BASE_URL = "http://your-domain.com/api";<br>
-&nbsp;&nbsp;&nbsp;&nbsp;public static final String VERSION_BASE_URL = "http://your-domain.com";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;public static final String BASE_URL = "http://你得到的域名/api";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;public static final String VERSION_BASE_URL = "http://你得到的域名";<br>
 }<br>
 ⚠️ 注意事项
 确保服务端端口8080未被占用
