@@ -49,7 +49,9 @@
 
 3. 服务端配置
 修改 Serve/src/main/resources/application.properties：<br>spring.datasource.username=您的数据库账号<br>spring.datasource.password=您的数据库密码<br>spring.web.resources.static-locations=file:///E:/Chat_informations/post_images/
-4. 客户端配置
+spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
+&nbsp;&nbsp;在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变
+5. 客户端配置
 修改 Client/java/com/example/chat/utils/Constants.java：<br>public class Constants {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;// 使用花生壳分配的公网域名<br>
 &nbsp;&nbsp;&nbsp;&nbsp;public static final String BASE_URL = "http://你得到的域名/api";<br>
