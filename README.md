@@ -1,8 +1,8 @@
 # -Android-app-chat
 
-安卓原生开发-聊天app
+#安卓原生开发-聊天app
 
-部署教程：
+##部署教程：
 
 使用软件,IntelliJ IDEA(版本无所谓)、Android studio(版本无所谓)、花生壳
 
