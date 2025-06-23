@@ -1,111 +1,116 @@
-# Android 聊天应用
+# Android Chat App
 
-基于Android原生开发与Spring Boot后端的即时通讯应用，支持跨网络实时消息传输。
+[English](./README.md) | [中文](./README_CN.md)
 
-## 项目架构
+Real-time messaging application based on native Android development and Spring Boot backend, supporting cross-network message transmission.
 
-- **客户端**：Android原生应用
-- **服务端**：Spring Boot RESTful API
-- **数据库**：MySQL 8.0+
-- **网络**：支持内网穿透实现公网访问
+## Architecture
 
-## 环境要求
+- **Client**: Native Android application
+- **Server**: Spring Boot RESTful API
+- **Database**: MySQL 8.0+
+- **Network**: Supports internal network penetration for public access
 
-| 工具 | 版本 | 用途 |
-|------|------|------|
-| Android Studio | 最新版 | 客户端开发/运行 |
-| IntelliJ IDEA | 最新版 | 服务端开发/运行 |
-| MySQL | 8.0+ | 数据库 |
-| 花生壳 | 最新版 | 内网穿透工具(可选) |
-| JDK | 1.8 | Java开发环境 |
+## Environment Requirements
 
-## 快速部署
+| Tool | Version | Purpose |
+|------|---------|---------|
+| Android Studio | Latest | Client development/running |
+| IntelliJ IDEA | Latest | Server development/running |
+| MySQL | 8.0+ | Database |
+| Oray Phsray | Latest | Internal network penetration tool (optional) |
+| JDK | 1.8 | Java development environment |
 
-### 1. 数据库配置
+## Quick Deployment
 
-1. 安装MySQL 8.0+
-2. 创建名为`chat_app`的数据库
-3. 执行项目中的SQL脚本文件创建表结构
+### 1. Database Configuration
 
-### 2. 服务端配置
+1. Install MySQL 8.0+
+2. Create a database named `chat_app`
+3. Execute the SQL script file in the project to create table structures
 
-1. 使用IntelliJ IDEA打开`Serve/chat`目录
-2. 修改`src/main/resources/application.properties`：
+### 2. Server Configuration
+
+1. Open the `Serve/chat` directory using IntelliJ IDEA
+2. Modify `src/main/resources/application.properties`:
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/chat_app?useSSL=false&serverTimezone=UTC
-   spring.datasource.username=你的MySQL用户名
-   spring.datasource.password=你的MySQL密码
+   spring.datasource.username=your_mysql_username
+   spring.datasource.password=your_mysql_password
    
-   # 修改为你的静态资源目录
-   spring.web.resources.static-locations=file:///你的路径/Chat_informations/post_images/
+   # Modify to your static resource directory
+   spring.web.resources.static-locations=file:///your_path/Chat_informations/post_images/
    ```
-3. 创建以下目录结构用于存储用户上传的图片：
+3. Create the following directory structure for storing user-uploaded images:
    ```
    E:/Chat_informations/
    └── post_images/
    ```
-4. 运行`ChatApplication.java`启动服务器
+4. Run `ChatApplication.java` to start the server
 
-### 3. 客户端配置
+### 3. Client Configuration
 
-1. 使用Android Studio打开`Client/chat`目录
-2. 修改`app/src/main/java/com/example/chat/utils/Constants.java`中的API地址：
+1. Open the `Client/chat` directory using Android Studio
+2. Modify API address in `app/src/main/java/com/example/chat/utils/Constants.java`:
    ```java
-   // 本地测试用localhost:8080或10.0.2.2:8080(模拟器)
-   // 局域网测试使用内网IP如192.168.x.x:8080
-   // 公网访问使用花生壳域名
-   public static final String BASE_URL = "http://你的IP或域名:8080/api";
-   public static final String VERSION_BASE_URL = "http://你的IP或域名:8080/";
+   // For local testing use localhost:8080 or 10.0.2.2:8080 (emulator)
+   // For LAN testing use internal IP like 192.168.x.x:8080
+   // For public access use Oray Phsray domain
+   public static final String BASE_URL = "http://your_ip_or_domain:8080/api";
+   public static final String VERSION_BASE_URL = "http://your_ip_or_domain:8080/";
    ```
-3. 构建并运行应用
+3. Build and run the application
 
-### 4. 内网穿透设置(可选)
+### 4. Internal Network Penetration Setup (Optional)
 
-如需从外网访问应用:
-1. 下载并安装[花生壳](https://hsk.oray.com/)
-2. 注册并登录花生壳账号
-3. 添加映射，将本地8080端口映射到公网域名
-4. 将花生壳提供的域名配置到客户端的`Constants.java`
+For external network access:
+1. Download and install [Oray Phsray](https://hsk.oray.com/)
+2. Register and log in to your Phsray account
+3. Add mapping, map local port 8080 to a public domain
+4. Configure the domain provided by Phsray to `Constants.java` in the client
 
-## 功能特性
+## Features
 
-- 用户注册与登录
-- 好友添加与管理
-- 实时聊天
-- 发布动态/帖子
-- 隐私与安全设置
+- User registration and login
+- Friend addition and management
+- Real-time chat
+- Post creation and sharing
+- Privacy and security settings
 
-## 项目结构
+## Project Structure
+
+```
 Android Chat/
-├── Client/ # 安卓客户端
-│ └── chat/ # Android Studio项目
-└── Serve/ # Spring Boot服务端
-└── chat/ # Spring Boot项目
+├── Client/ # Android client
+│ └── chat/ # Android Studio project
+└── Serve/ # Spring Boot server
+└── chat/ # Spring Boot project
+```
 
 
-## 技术栈
+## Tech Stack
 
-- **客户端**:
+- **Client**:
   - Android SDK (Min SDK 24, Target SDK 34)
-  - Retrofit2 + OkHttp3 (网络请求)
+  - Retrofit2 + OkHttp3 (Network requests)
   - Material Design
-  - Glide (图片加载)
+  - Glide (Image loading)
 
-- **服务端**:
+- **Server**:
   - Spring Boot
   - Spring Data JPA
   - MySQL
   - RESTful API
 
-## 常见问题
+## Common Issues
 
-1. 数据库连接失败：检查MySQL服务是否启动及连接参数是否正确
-2. 客户端连接服务器失败：检查网络配置，确认API地址正确，服务器运行正常
-3. 图片资源不显示：确认静态资源目录配置正确并有读写权限
+1. Database connection failure: Check if MySQL service is running and connection parameters are correct
+2. Client cannot connect to server: Check network configuration, confirm API address is correct, server is running normally
+3. Images not displaying: Ensure static resource directory is configured correctly and has read/write permissions
 
-## 联系方式
+## Contact Information
 
-有任何问题请通过以下方式联系:
+For any questions, please contact:
 
 - QQ: 1652855974
-- 微信: Lgy2873551074
+- WeChat: Lgy2873551074
