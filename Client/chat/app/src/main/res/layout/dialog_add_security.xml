@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_add_security"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/add_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 已有的密保问题 -->
+        <LinearLayout
+            android:id="@+id/existing_security_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/existing_security_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已有的密保问题"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 动态添加已有的密保问题 -->
+        </LinearLayout>
+
+        <!-- 新增密保问题的标题 -->
+        <TextView
+            android:id="@+id/new_security_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加新的密保问题"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 问题1 -->
+        <LinearLayout
+            android:id="@+id/new_question_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_question_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密保问题 1" />
+
+            <Spinner
+                android:id="@+id/spinner_question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edit_answer_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入答案"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"
+                android:enabled="true" />
+        </LinearLayout>
+
+        <!-- 问题2 -->
+        <LinearLayout
+            android:id="@+id/new_question_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密保问题 2" />
+
+            <Spinner
+                android:id="@+id/spinner_question_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edit_answer_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入答案"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"
+                android:enabled="true" />
+        </LinearLayout>
+
+        <!-- 问题3 -->
+        <LinearLayout
+            android:id="@+id/new_question_layout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_question_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密保问题 3" />
+
+            <Spinner
+                android:id="@+id/spinner_question_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edit_answer_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入答案"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"
+                android:enabled="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

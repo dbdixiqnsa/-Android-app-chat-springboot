@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_a_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 顶部标题栏 -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息"
+            android:textSize="20sp"
+            android:background="#FFF3FC"
+            android:layout_centerHorizontal="true" />
+
+        <!-- 添加好友按钮 -->
+        <ImageView
+            android:id="@+id/add_friend_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_add_friend"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <!-- 红点 -->
+        <View
+            android:id="@+id/add_friend_badge"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignEnd="@id/add_friend_button"
+            android:layout_alignTop="@id/add_friend_button"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/badge_background"
+            android:visibility="gone" />
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/conversation_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar" />
+
+</RelativeLayout>

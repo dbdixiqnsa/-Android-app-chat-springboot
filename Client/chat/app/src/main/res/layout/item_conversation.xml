@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <!-- 用户头像 -->
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_user" />
+
+    <!-- 昵称 -->
+    <TextView
+        android:id="@+id/nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/user_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:text="昵称"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- 时间戳 -->
+    <TextView
+        android:id="@+id/timestamp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/nickname_text"
+        android:text="时间"
+        android:textSize="12sp"
+        android:textColor="#999999" />
+
+    <!-- 未读消息数量 -->
+    <TextView
+        android:id="@+id/unread_count_text"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@id/timestamp_text"
+        android:layout_below="@id/timestamp_text"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/badge_background"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 最新消息 -->
+    <TextView
+        android:id="@+id/latest_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nickname_text"
+        android:layout_toEndOf="@id/user_image"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:text="最新消息"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</RelativeLayout>

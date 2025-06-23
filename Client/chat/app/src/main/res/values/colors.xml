@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="light_green">#A5D6A7</color>
+    <color name="colorSelected">#000AFF</color> <!-- 选中颜色 -->
+    <color name="colorDefault">#FF9211</color>  <!-- 默认颜色 -->
+
+    <color name="background_color">#F5F5F5</color>
+    <color name="primary_text_color">#212121</color>
+    <color name="hint_text_color">#9E9E9E</color>
+    <color name="button_background_color">#6200EE</color>
+    <color name="button_text_color">#FFFFFF</color>
+
+    <color name="gray">#808080</color>
+
+    <!-- 文本颜色 -->
+    <color name="text_primary">#DE000000</color>   <!-- 87% 黑色 -->
+    <color name="text_secondary">#99000000</color> <!-- 60% 黑色 -->
+    <color name="text_hint">#61000000</color>      <!-- 38% 黑色 -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_white_secondary">#B3FFFFFF</color>  <!-- 70% 白色 -->
+</resources>

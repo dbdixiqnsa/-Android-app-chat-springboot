@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_verify_security_questions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/verify_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFD9FA">
+
+            <LinearLayout
+                android:id="@+id/arrow_left_container"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_left" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证密保"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+
+        </Toolbar>
+
+        <!-- 密保问题 1 -->
+        <EditText
+            android:id="@+id/question_edit_text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密保问题 1"
+            android:enabled="false"
+            android:background="@null"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/answer_edit_text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入答案"
+            android:inputType="textPassword" />
+
+        <!-- 密保问题 2 -->
+        <EditText
+            android:id="@+id/question_edit_text_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密保问题 2"
+            android:enabled="false"
+            android:background="@null"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/answer_edit_text_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入答案"
+            android:inputType="textPassword" />
+
+        <!-- 密保问题 3 -->
+        <EditText
+            android:id="@+id/question_edit_text_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密保问题 3"
+            android:enabled="false"
+            android:background="@null"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/answer_edit_text_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入答案"
+            android:inputType="textPassword" />
+
+        <!-- 验证按钮 -->
+        <TextView
+            android:id="@+id/verify_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_2"
+            android:gravity="center"
+            android:text="验证"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

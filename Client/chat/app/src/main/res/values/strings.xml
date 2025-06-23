@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">chat</string>
+    <string name="exit"><u>退出登录</u></string>
+    <string name="user_image">用户头像</string>
+    <string name="error_email_empty">邮箱不能为空</string>
+    <string name="error_email_at_symbol">邮箱必须包含 @ 符号</string>
+    <string name="error_email_dot">邮箱必须包含 . 符号</string>
+    <string name="error_email_format">邮箱格式不正确，示例：username@domain.com</string>
+    <string name="error_email_local_part">@ 符号前必须有内容</string>
+    <string name="error_email_domain">域名格式不正确，必须包含 . 符号，如：domain.com</string>
+    <string name="error_email_invalid_chars">邮箱只能包含字母、数字和特殊字符(._%+-)</string>
+    <string name="email_format_valid">邮箱格式正确</string>
+</resources>

@@ -1,0 +1,22 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/fragment_a"
+        android:icon="@drawable/ic_chat"
+        android:title="好友"
+        app:showAsAction="ifRoom"
+        android:itemBackground="@android:color/transparent"/>
+    <item
+        android:id="@+id/fragment_b"
+        android:icon="@drawable/ic_forum"
+        android:title="动态"
+        app:showAsAction="ifRoom"
+        android:itemBackground="@android:color/transparent"/>
+    <item
+        android:id="@+id/fragment_c"
+        android:icon="@drawable/ic_my"
+        android:title="我的"
+        app:showAsAction="ifRoom"
+        android:itemBackground="@android:color/transparent"/>
+</menu>

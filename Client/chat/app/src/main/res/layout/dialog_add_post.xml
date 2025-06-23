@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <Toolbar
+        android:id="@+id/toolbar_add_post"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFF3FC"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- 返回按钮 -->
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="返回"
+            android:layout_gravity="start" />
+
+        <!-- 居中的标题 TextView -->
+        <TextView
+            android:id="@+id/text_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布动态"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+    </Toolbar>
+
+    <!-- 帖子标题 -->
+    <EditText
+        android:id="@+id/edit_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题"
+        android:inputType="text"
+        android:padding="8dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 帖子内容 -->
+    <EditText
+        android:id="@+id/edit_post_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="内容"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="8dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 显示选择的图片 -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/images_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:padding="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- 选择图片按钮 -->
+        <Button
+            android:id="@+id/button_select_images"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="选择图片 (最多4张)"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- 提交按钮 -->
+        <Button
+            android:id="@+id/button_submit_post"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="发布"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

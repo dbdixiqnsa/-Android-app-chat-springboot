@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFD9FA"
+        app:title=""
+        app:titleTextColor="#000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 左侧返回箭头 -->
+            <LinearLayout
+                android:id="@+id/arrow_left_container"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_left" />
+            </LinearLayout>
+
+            <!-- 中间标题 -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="好友"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+
+            <!-- 加号按钮和红点 -->
+            <RelativeLayout
+                android:id="@+id/add_friend_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/add_friend_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_add_friend" />
+
+                <View
+                    android:id="@+id/add_friend_badge"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignEnd="@id/add_friend_button"
+                    android:layout_alignTop="@id/add_friend_button"
+                    android:background="@drawable/badge_background"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- 好友列表 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friends_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <!-- SideBar -->
+    <com.example.chat.navigation.fragment.C_2_Function.SideBar
+        android:id="@+id/side_bar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@android:color/transparent" />
+
+    <!-- 显示当前字母的 Overlay -->
+    <TextView
+        android:id="@+id/overlay"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/overlay_background"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

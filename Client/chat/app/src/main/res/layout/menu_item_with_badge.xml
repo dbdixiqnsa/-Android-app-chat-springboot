@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_item_container"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp">
+
+    <!-- 菜单项图标 -->
+    <ImageView
+        android:id="@+id/menu_item_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_friend_requests" />
+
+    <!-- 菜单项文字 -->
+    <TextView
+        android:id="@+id/menu_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/menu_item_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:text="好友申请"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- 红点数量 -->
+    <TextView
+        android:id="@+id/menu_item_badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/badge_background"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</RelativeLayout>

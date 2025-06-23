@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- 左侧问题和答案部分 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- 密保问题 -->
+        <TextView
+            android:id="@+id/security_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="密保问题"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:paddingBottom="4dp" />
+
+        <!-- 密保答案 -->
+        <TextView
+            android:id="@+id/security_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#888888" />
+    </LinearLayout>
+
+    <!-- 删除按钮 -->
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_delete"
+        android:background="?selectableItemBackground"
+        android:contentDescription="删除密保"
+        android:layout_gravity="center_vertical"
+        android:padding="8dp" />
+</LinearLayout>

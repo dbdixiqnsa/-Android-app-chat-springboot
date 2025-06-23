@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 时间戳 -->
+    <TextView
+        android:id="@+id/sent_message_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:34 PM"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:paddingBottom="4dp"/>
+
+    <!-- 现有的消息布局 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- 头像 -->
+        <ImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_user"
+            android:layout_alignParentEnd="true" />
+
+        <!-- 消息内容 -->
+        <TextView
+            android:id="@+id/sent_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:background="@drawable/bg_sent_message"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_toStartOf="@id/avatar_image_view"
+            android:layout_alignTop="@id/avatar_image_view"
+            android:layout_marginEnd="8dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
