@@ -1,63 +1,111 @@
-# Android 即时通讯应用 🚀
+# Android 聊天应用
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+基于Android原生开发与Spring Boot后端的即时通讯应用，支持跨网络实时消息传输。
 
-基于安卓原生开发与Spring Boot后端的即时通讯解决方案，支持跨网络实时消息传输。
+## 项目架构
 
-## 🌟 核心特性
-- 基于TCP/IP协议的实时消息传输
-- Spring Boot服务端提供RESTful API
-- MySQL数据库存储结构化数据
-- 花生壳内网穿透实现公网访问
-- 用户头像与多媒体文件云端存储
+- **客户端**：Android原生应用
+- **服务端**：Spring Boot RESTful API
+- **数据库**：MySQL 8.0+
+- **网络**：支持内网穿透实现公网访问
 
----
+## 环境要求
 
-## 🛠️ 部署指南
+| 工具 | 版本 | 用途 |
+|------|------|------|
+| Android Studio | 最新版 | 客户端开发/运行 |
+| IntelliJ IDEA | 最新版 | 服务端开发/运行 |
+| MySQL | 8.0+ | 数据库 |
+| 花生壳 | 最新版 | 内网穿透工具(可选) |
+| JDK | 1.8 | Java开发环境 |
 
-### 环境要求
-| 工具                | 用途                     | 官方链接                          |
-|---------------------|--------------------------|-----------------------------------|
-| IntelliJ IDEA       | 服务端开发               | [官网下载](https://www.jetbrains.com/idea/) |
-| Android Studio      | 客户端开发               | [官网下载](https://developer.android.com/studio) |
-| 花生壳              | 内网穿透                 | [下载地址](https://hsk.oray.com) |
-| MySQL 8.0+          | 数据库服务               | [下载地址](https://dev.mysql.com/downloads/mysql) |
+## 快速部署
 
----
+### 1. 数据库配置
 
-### 🚦 部署流程
+1. 安装MySQL 8.0+
+2. 创建名为`chat_app`的数据库
+3. 执行项目中的SQL脚本文件创建表结构
 
-&nbsp;&nbsp;&nbsp;&nbsp;使用软件：IntelliJ IDEA(版本无所谓)、Android studio(版本无所谓)、花生壳
+### 2. 服务端配置
 
-&nbsp;&nbsp;&nbsp;&nbsp;该项目将spring boot部署在本地作为服务器，接收每个app的请求，实现随时随地发送接收信息。
+1. 使用IntelliJ IDEA打开`Serve/chat`目录
+2. 修改`src/main/resources/application.properties`：
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/chat_app?useSSL=false&serverTimezone=UTC
+   spring.datasource.username=你的MySQL用户名
+   spring.datasource.password=你的MySQL密码
+   
+   # 修改为你的静态资源目录
+   spring.web.resources.static-locations=file:///你的路径/Chat_informations/post_images/
+   ```
+3. 创建以下目录结构用于存储用户上传的图片：
+   ```
+   E:/Chat_informations/
+   └── post_images/
+   ```
+4. 运行`ChatApplication.java`启动服务器
 
-&nbsp;&nbsp;由于能够不限地点发送消息，需要使用第三方工具实现内网穿透，将本地的内网ip映射到工具提供的公网域名，这里使用的是花生壳内网穿透(免费)
+### 3. 客户端配置
 
-&nbsp;&nbsp;&nbsp;&nbsp;下载地址：https://hsk.oray.com    
-&nbsp;&nbsp;&nbsp;&nbsp;使用教程：https://service.oray.com/question/15507.html
+1. 使用Android Studio打开`Client/chat`目录
+2. 修改`app/src/main/java/com/example/chat/utils/Constants.java`中的API地址：
+   ```java
+   // 本地测试用localhost:8080或10.0.2.2:8080(模拟器)
+   // 局域网测试使用内网IP如192.168.x.x:8080
+   // 公网访问使用花生壳域名
+   public static final String BASE_URL = "http://你的IP或域名:8080/api";
+   public static final String VERSION_BASE_URL = "http://你的IP或域名:8080/";
+   ```
+3. 构建并运行应用
 
-&nbsp;&nbsp;&nbsp;&nbsp;下载MySql
+### 4. 内网穿透设置(可选)
 
-&nbsp;&nbsp;&nbsp;&nbsp;下载地址：https://dev.mysql.com/downloads/mysql
+如需从外网访问应用:
+1. 下载并安装[花生壳](https://hsk.oray.com/)
+2. 注册并登录花生壳账号
+3. 添加映射，将本地8080端口映射到公网域名
+4. 将花生壳提供的域名配置到客户端的`Constants.java`
 
-&nbsp;&nbsp;&nbsp;&nbsp;Mysql环境变量配置教程：https://blog.csdn.net/qq_52853542/article/details/124669072
+## 功能特性
 
-在IDEA的Database中连接数据库，使用仓库中的数据库脚本文件创建相应的数据库
+- 用户注册与登录
+- 好友添加与管理
+- 实时聊天
+- 发布动态/帖子
+- 隐私与安全设置
 
-&nbsp;&nbsp;&nbsp;&nbsp;在IDEA中打开spring boot项目Serve，下载相应的依赖，运行后默认监听端口为8080，在花生壳内网穿透编辑页面将这个端口和自己的内网ip地址填入，实现内网穿透，更详细的操作可以看文件：项目详细介绍.doc
-&nbsp;&nbsp;映射完成后，将客户端Client文件的java/com/example/chat/utils/Constants.java文件中的BASE_URL和VERSION_BASE_URL修改为自己得到的域名(注：BASE_URL结尾的/api不要误删)
+## 项目结构
+Android Chat/
+├── Client/ # 安卓客户端
+│ └── chat/ # Android Studio项目
+└── Serve/ # Spring Boot服务端
+└── chat/ # Spring Boot项目
 
-服务端Serve中src/main/resources/application.properties文件里的
 
-spring.datasource.username为MySQL数据库的用户名
-spring.datasource.password为数据库的密码
-spring.web.resources.static-locations为用户上传的头像等图片的保存位置，该项目已经将该文件夹放入仓库，
-&nbsp;&nbsp;在自己电脑上运行时请修改为自己的路径，类似于file:///E:/Chat_informations/post_images/  文件夹结构请勿改变
+## 技术栈
 
-📬 技术支持
-遇到问题？欢迎随时联系：
+- **客户端**:
+  - Android SDK (Min SDK 24, Target SDK 34)
+  - Retrofit2 + OkHttp3 (网络请求)
+  - Material Design
+  - Glide (图片加载)
 
-联系方式	账号
-📧 QQ	1652855974&nbsp;&nbsp;&nbsp;&nbsp;
-💬 微信	Lgy2873551074
+- **服务端**:
+  - Spring Boot
+  - Spring Data JPA
+  - MySQL
+  - RESTful API
+
+## 常见问题
+
+1. 数据库连接失败：检查MySQL服务是否启动及连接参数是否正确
+2. 客户端连接服务器失败：检查网络配置，确认API地址正确，服务器运行正常
+3. 图片资源不显示：确认静态资源目录配置正确并有读写权限
+
+## 联系方式
+
+有任何问题请通过以下方式联系:
+
+- QQ: 1652855974
+- 微信: Lgy2873551074
